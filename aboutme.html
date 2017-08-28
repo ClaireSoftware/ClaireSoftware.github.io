@@ -15,18 +15,22 @@ padding: 15px 32px;
 text-align: center;
 text-decoration: none;
 }
-}
 .whitebold
 {
-color: white;
-font-weight: bold;
-font-family: "Comic Sans MS", cursive, sans-serif;
+    color: white;
+    font-weight: bold;
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
+    li.bigger
+    {
+    font-size: 150%;
+    }
 </style>
   <title>About Me!</title>
   <body>
     <h1>Personal Info Page</h1>
     <p>Hello! This is my about me page. This will contain information about me. By the way, you can find the source for this webpage on <a href="https://github.com/ClaireSoftware/ClaireSoftware.github.io">Github</a>.</p>
+  <h3>A couple cool things I made in HTML and Javascript</h3>
   <button onclick="getLocation();" class="button">Show Geolocation</button>
   <p id="demo" style="color: black; font-weight: bold;";></p>   
   <script>
@@ -44,8 +48,17 @@ function showPosition(position) {
 } /* This Javascript is free software. */
   </script>
   <h3>About me</h3>
-  <ul style: "list-style-type: circle;">
-    <li>I'm a female software developer. In particular, I like working on GNU+Linux, and one day hope to be a Linux Kernel maintainer.</li>
+  <ul style= "list-style-type: circle;">
+    <li class="bigger">I'm a female software developer. In particular, I like working on GNU+Linux, and one day hope to be a Linux Kernel maintainer.</li>
+    <li class="bigger">I love dogs, and have four of them. Two Shetland Sheepdogs, one Australian Sheepdog, and one Mixed breed.</li>
+    <li class="bigger">I play quite a few video games, especially Minecraft and almost everything for the Nintendo Switch. Ask me for my Friend Code!</li>
+    <li class="bigger">I'm bisexual, although I mostly like Men.</li>
+    <li class="bigger">Outside of technology, I'm an avid foodie, and particularly enjoy steak and other various meats.</li>
+    <li class="bigger">I'm rather liberal in political ideology. I supported Bernie Sanders in the 2016 election, and was devestated when Trump won.</li>
+    <li class="bigger">I try to validate and accept everyone's identity. If I don't, please let me know, so that I can improve.</li>
+    <li class="bigger">I have Aspergers. I'm trying to constantly improve myself, so if I appear aloof, rude, or unsympathetic, please let me know.</li>
+    <li class="bigger">As long as you're nice to me, I can help you with simple programming projects. Contact me on freenode, or at <a href="mailto:claire-software@riseup.net">claire-software@riseup.net</a>.</li>
+    <li class="bigger">As you can see, I have a rather garish taste in HTML design.</li>
   </ul>
   
   </body>
