@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;    
+}
+.copyleft {
+  display:inline-block;
+  transform: rotate(180deg);
+}
+body
+{
+background-image: url(gnu_linux.png);
+}
+.rainbow {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+background-clip: text;
+font-weight: bold;
+font-size:100px;
+}
+</style>
+</head>
+<body>
+  <script type="text/javascript">
+  (function() {
+    var blinks = document.getElementsByTagName('blink');
+    var visibility = 'hidden';
+    window.setInterval(function() {
+      for (var i = blinks.length - 1; i >= 0; i--) {
+        blinks[i].style.visibility = visibility;
+      }
+      visibility = (visibility === 'visible') ? 'hidden' : 'visible';
+    }, 250);
+  })();
+</script>
+
+ <marquee behavior=scroll scroll-amount="30"><blink class="rainbow">IS IT POSSIBLE FOR THIS TO BE MORE ANNOYING?!</blink></marquee>
+  <button onclick="myfunction()">Click here to see your User Agent</button>
+<footer>
+  <span class="copyleft">&copy;</span> <span class="rainbow" style="font-size:10px;">This webpage is copyleft, all rights reversed.</span>
+</footer>
+<script>
+  function myfunction(){
+  var x= navigator.userAgent;
+document.getElementById("demo").innerHTML=x;
+}
+</script>
+
+<div style="background-color: lightgreen;">
+<p id="demo" style="color:violet; font-weight: bold;"></p>
+</div>
+</body>
+</html>
