@@ -28,11 +28,37 @@ background-color: #66ff33;
     {
     font-size: 150%;
     }
+    .rainbow {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+background-clip: text;
+font-weight: bold;
+font-size:100px;
+}
+
   </style>
   
   <title>About Me!</title>
   <body>
+    <script type="text/javascript">
+  (function() {
+    var blinks = document.getElementsByTagName('blink');
+    var visibility = 'hidden';
+    window.setInterval(function() {
+      for (var i = blinks.length - 1; i >= 0; i--) {
+        blinks[i].style.visibility = visibility;
+      }
+      visibility = (visibility === 'visible') ? 'hidden' : 'visible';
+    }, 250);
+  })();
+    </script>
+    <!--<audio autoplay loop>
+      <source src="https://www.gnu.org/music/FreeSWSong.ogg">
+	</audio>-->
     <h1>Personal Info Page</h1>
+    <marquee><blink class="rainbow">USE FREE SOFTWARE</blink></marquee>
     <p>Hello! This is my about me page. This will contain information about me. By the way, you can find the source for this webpage on <a href="https://github.com/ClaireSoftware/ClaireSoftware.github.io">Github</a>.</p>
   <h3>A couple cool things I made in HTML and Javascript</h3>
   <button onclick="getLocation();" class="button">Show Geolocation</button>
