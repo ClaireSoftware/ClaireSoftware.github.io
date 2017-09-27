@@ -1,18 +1,38 @@
 <!DOCTYPE html>
 <!-- Welcome to my Website! Pardon the clutter.  -->
 <head>
-<html>
-<title>Claire's Site</title>
-<style>
-  body {animation: mymove 5s infinite;
-  cursor: url(/Images/Tux.png),auto;
-  }
-h1 {color: blue};
-h3 {color: red;}
-p  {color: black;}
-ul { list-style: square;}
-  @keyframes mymove { from {background-color: orange;} to {background-color: powderblue;} }
-</style>
+  <html>
+    <title>Claire's Site</title>
+    <style>
+      body {animation: mymove 5s infinite;
+      cursor: url(/Images/Tux.png),auto;
+      }
+      h1 {color: blue};
+      h3 {color: red;}
+      p  {color: black;}
+      ul { list-style: square;}
+      @keyframes mymove { from {background-color: orange;} to {background-color: powderblue;} }
+      .tex sub, .latex sub, .latex sup {
+      text-transform: uppercase;
+      }
+
+      .tex sub, .latex sub {
+      vertical-align: -0.5ex;
+      margin-left: -0.1667em;
+      margin-right: -0.125em;
+      }
+
+      .tex, .latex, .tex sub, .latex sub {
+      font-size: 1em;
+      }
+
+      .latex sup {
+      font-size: 0.85em;
+      vertical-align: 0.15em;
+      margin-left: -0.36em;
+      margin-right: -0.15em;
+      }
+    </style>
 </head>
 <body>
   <h1>Main heading for My Page.</h1>
@@ -22,28 +42,26 @@ ul { list-style: square;}
   <a href="Breakout_Game.html">Breakout Game that I made</a> |
   <a href="Index_es.html">Mi Sitio En Español</a>
   <!--<a href="maps.html">Openstreetmaps Example</a> -->
-<a href="Leah_Fanfic.pdf">My Fanfic</a>
+  <a href="Leah_Fanfic.pdf">My Fanfic</a>
   <hr />
   <h3>About Me</h3>
-  <p> Hello! I am but a lowly programmer, tending to her code. In my spare time, you can find me on the ##transit IRC channel on freenode as the user ClaireDesu, or on discord(Ask for my username on the IRC).</p>
+  <p> Hello! I am but a lowly programmer, tending to her code. In my spare time, you can find me on the <a href="https://webchat.freenode.net/?channels=##transit">Transit</a> IRC channel on <a name="freenode.net">freenode</a> as the user ClaireDesu, or on Discord (Ask for my username on the IRC).</p>
   <h4>Programming Languages</h4>
   <ul>
     <li>Java</li>
     <li>C</li>
-    <li>LaTeX</li>
+    <li><span class="latex">L<sup>a</sup>T<sub>e</sub>X</span></li>
     <li>HTML</li>
     <li>Bash Scripting</li>
   </ul>
   <h4>My Compute Setup</h4>
   <ul>
-    <li>Debian <a href="http://gnu.org">GNU</a>/<a href="http://kernel.org">Linux</a>
-    </li>
-    <li><a href="https://gnu.org/software/emacs/">GNU Emacs</a>
-      Text Editor (Works great for HTML editing!)</li>
-    <li><a href="http://libreboot.org">Libreboot</a> x200 Laptop</li>
+    <li>Debian <a href="http://www.gnu.org">GNU</a>/<a href="http://www.kernel.org">Linux</a></li>
+    <li><a href="https://www.gnu.org/software/emacs/">GNU Emacs</a> Text Editor (Works great for HTML editing!)</li>
+    <li><a href="http://www.libreboot.org">Libreboot</a> x200 Laptop</li>
     <li>MATE Desktop Environment</li>
   </ul>
-<a href="http://gnu.org"><img src="/Images/gnu_linux.png" alt="Support GNU/Linux!" height="200" width="300"></a>
-<a href="http://libreboot.org"><img src="/Images/Libreboot_Logo.jpg" alt="Support Libreboot!" height="200" width="125"></a>
+  <a href="http://www.gnu.org"><img src="/Images/gnu_linux.png" alt="Support GNU/Linux!" height="200" width="300"></a>
+  <a href="http://www.libreboot.org"><img src="/Images/Libreboot_Logo.jpg" alt="Support Libreboot!" height="200" width="125"></a>
 </body>
 </html>
