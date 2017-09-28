@@ -1,99 +1,109 @@
 <!DOCTYPE html>
 <html>
-  <style>
-    body {background: linear-gradient(to bottom, red,orange,yellow,green,blue,indigo,violet);
-    cursor: url(/Images/Tux.png),auto;
-  } 
-h1 {color: blue;}
-h3 {color: red;}
-p  {color: black; font-weight: 500;}
-.button {
-background-color: #66ff33;
-    border: none;
-    color: rgb(255,153,0);
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    
-    }
-    .whitebold
-    
-    {
-    
-    color: white;
-    font-weight: bold;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    }
-    li.bigger
-    {
-    font-size: 150%;
-    }
-    .rainbow {
-  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  color:transparent;
-  -webkit-background-clip: text;
-background-clip: text;
-font-weight: bold;
-font-size:100px;
-}
-
-  </style>
+<head>
   
-  <title>About Me!</title>
-  <body>
-    <script type="text/javascript">
-  (function() {
+    <link rel="stylesheet" href="nav.css" type="text/css">
+    <style>
+      body {background: linear-gradient(to bottom, red,orange,yellow,green,blue,indigo,violet);
+      cursor: url(/Images/Tux.png),auto;
+      } 
+      h1 {color: blue;}
+      h3 {color: red;}
+      p  {color: black; font-weight: 500;}
+      .button {
+      background-color: #66ff33;
+      border: none;
+      color: rgb(255,153,0);
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      
+      }
+      .whitebold
+      
+      {
+      
+      color: white;
+      font-weight: bold;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      }
+      li.bigger
+      {
+      font-size: 150%;
+      }
+      .rainbow {
+      background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+      background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+      color:transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      font-weight: bold;
+      font-size:100px;
+      }
+
+    </style>
+    
+    <title>About Me!</title>
+</head>
+<body>
+  <script type="text/javascript">
+    (function() {
     var blinks = document.getElementsByTagName('blink');
     var visibility = 'hidden';
     window.setInterval(function() {
-      for (var i = blinks.length - 1; i >= 0; i--) {
-        blinks[i].style.visibility = visibility;
-      }
-      visibility = (visibility === 'visible') ? 'hidden' : 'visible';
+    for (var i = blinks.length - 1; i >= 0; i--) {
+    blinks[i].style.visibility = visibility;
+    }
+    visibility = (visibility === 'visible') ? 'hidden' : 'visible';
     }, 250);
-  })();
-    </script>
-    <audio autoplay loop>
-      <source src="/Images/Free_Software_Song.ogg">
-	</audio>
-    <h1>Personal Info Page</h1>
-    <marquee><blink class="rainbow">USE FREE SOFTWARE</blink></marquee>
-    <p>Hello! This is my about me page. This will contain information about me. By the way, you can find the source for this webpage on <a href="https://github.com/ClaireSoftware/ClaireSoftware.github.io">Github</a>.</p>
+    })();
+  </script>
+  <audio autoplay loop>
+    <source src="/Images/Free_Software_Song.ogg">
+  </audio>
+  <h1>Personal Info Page</h1>
+  <div class="topnav">
+    <a class="active" index="index.html">Home</a>
+    <a href="aboutme.html">About Me (You are here!)</a>
+    <a href="Breakout_Game.html">Breakout Game That I Made</a>
+    <a href="Leah_Fanfic.pdf">A Fanfic That I Wrote</a>
+  </div>
+  <marquee><blink class="rainbow">USE FREE SOFTWARE</blink></marquee>
+  <p>Hello! This is my about me page. This will contain information about me. By the way, you can find the source for this webpage on <a href="https://github.com/ClaireSoftware/ClaireSoftware.github.io">Github</a>.</p>
   <!-- Deprecated until I get some https <h3>A couple cool things I made in HTML and Javascript</h3>
-  <button onclick="getLocation();" class="button">Show Geolocation</button>
+       <button onclick="getLocation();" class="button">Show Geolocation</button>
   <p id="demo" style="color: black; font-weight: bold;";></p>   
   <script>
-var x = document.getElementById("demo");
-function getLocation() {
+    var x = document.getElementById("demo");
+    function getLocation() {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
+    navigator.geolocation.getCurrentPosition(showPosition);
     } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
+    x.innerHTML = "Geolocation is not supported by this browser.";
     }
-}
-function showPosition(position) {
+    }
+    function showPosition(position) {
     x.innerHTML = "Your Latitude: " + position.coords.latitude + 
     "<br>Your Longitude: " + position.coords.longitude; 
-} /* This Javascript is free software. */
+    } /* This Javascript is free software. */
   </script> -->
   <h2 style="color: orchid;">About Me</h2>
   <!-- Beginning of "Readability" div-->
   <div style="background-color: rgb(255,102,153); border: 2px solid rgb(27,245,218);">
-  <ul style= "list-style-type: circle;">
-    <li class="bigger">I'm a female software developer. In particular, I like working on GNU+Linux, and one day hope to be a Linux Kernel maintainer.</li>
-    <li class="bigger">I love dogs, and have four of them. Two Shetland Sheepdogs, one Australian Sheepdog, and one Mixed breed.</li>
-    <li class="bigger">I play quite a few video games, especially Minecraft and almost everything for the Nintendo Switch. Ask me for my Friend Code!</li>
-    <li class="bigger">I'm bisexual, although I mostly like Men.</li>
-    <li class="bigger">Outside of technology, I'm an avid foodie, and particularly enjoy steak and other various meats.</li>
-    <li class="bigger">I'm rather liberal in political ideology. I supported Bernie Sanders in the 2016 election, and was devestated when Trump won.</li>
-    <li class="bigger">I try to validate and accept everyone's identity. If I don't, please let me know, so that I can improve.</li>
-    <li class="bigger">I have Aspergers. I'm trying to constantly improve myself, so if I appear aloof, rude, or unsympathetic, please let me know.</li>
-    <li class="bigger">As long as you're nice to me, I can help you with simple programming projects. Contact me on freenode, or at <a href="mailto:claire-software@riseup.net">claire-software@riseup.net</a>.</li>
-    <li class="bigger">As you can see, I have a rather garish taste in HTML design.</li>
-    <li class="bigger">Aside from Discord, I try not to use proprietary software, so please don't ask me to download any. For reaons why, see <a href="http://gnu.org">GNU.org</a>.</li>
-    <li class="bigger">I'm not currently working on too many projects other than this website, but you will eventually be able to find a list at (Currently dead link)<a href="http://clairesoftware.me/projects.html">clairesoftware.me/projects.html</a>.</li>
-  </ul>
+    <ul style= "list-style-type: circle;">
+      <li class="bigger">I'm a female software developer. In particular, I like working on GNU+Linux, and one day hope to be a Linux Kernel maintainer.</li>
+      <li class="bigger">I love dogs, and have four of them. Two Shetland Sheepdogs, one Australian Sheepdog, and one Mixed breed.</li>
+      <li class="bigger">I play quite a few video games, especially Minecraft and almost everything for the Nintendo Switch. Ask me for my Friend Code!</li>
+      <li class="bigger">I'm bisexual, although I mostly like Men.</li>
+      <li class="bigger">Outside of technology, I'm an avid foodie, and particularly enjoy steak and other various meats.</li>
+      <li class="bigger">I'm rather liberal in political ideology. I supported Bernie Sanders in the 2016 election, and was devestated when Trump won.</li>
+      <li class="bigger">I try to validate and accept everyone's identity. If I don't, please let me know, so that I can improve.</li>
+      <li class="bigger">I have Aspergers. I'm trying to constantly improve myself, so if I appear aloof, rude, or unsympathetic, please let me know.</li>
+      <li class="bigger">As long as you're nice to me, I can help you with simple programming projects. Contact me on freenode, or at <a href="mailto:claire-software@riseup.net">claire-software@riseup.net</a>.</li>
+      <li class="bigger">As you can see, I have a rather garish taste in HTML design.</li>
+      <li class="bigger">Aside from Discord, I try not to use proprietary software, so please don't ask me to download any. For reaons why, see <a href="http://gnu.org">GNU.org</a>.</li>
+      <li class="bigger">I'm not currently working on too many projects other than this website, but you will eventually be able to find a list at (Currently dead link)<a href="http://clairesoftware.me/projects.html">clairesoftware.me/projects.html</a>.</li>
+    </ul>
   </div>
-  </body>
+</body>
 </html>

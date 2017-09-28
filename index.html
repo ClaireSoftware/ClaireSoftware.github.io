@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <!-- Welcome to my Website! Pardon the clutter.  -->
+<html>
 <head>
-  <html>
     <title>Claire's Site</title>
+    <link rel="stylesheet" type="text/css" href="nav.css">
     <style>
       body {animation: mymove 5s infinite;
       cursor: url(/Images/Tux.png),auto;
@@ -15,7 +16,7 @@
       .tex sub, .latex sub, .latex sup {
       text-transform: uppercase;
       }
-
+      /* Below is an implementation of the LaTeX logo in CSS */ 
       .tex sub, .latex sub {
       vertical-align: -0.5ex;
       margin-left: -0.1667em;
@@ -25,28 +26,30 @@
       .tex, .latex, .tex sub, .latex sub {
       font-size: 1em;
       }
-
       .latex sup {
       font-size: 0.85em;
       vertical-align: 0.15em;
       margin-left: -0.36em;
       margin-right: -0.15em;
       }
+      /* Footer Border
       footer {
       border: 1px solid black;
       }
     </style>
 </head>
 <body>
-  <h1>Main heading for My Page.</h1>
-  <hr />
-  <a href="http://w3schools.com/html/">W3Schools Tutorials</a> | 
-  <a href="aboutme.html">About Me (probably not the best thing for an epileptic person to be lookin' at. Just saying.)</a> |   <a href="http://nicememewebsitewebsitewebsitewebsitewebsite.website/">Nice Website</a> | 
-  <a href="Breakout_Game.html">Breakout Game that I made</a> |
-  <a href="Index_es.html">Mi Sitio En Español</a>
-  <!--<a href="maps.html">Openstreetmaps Example</a> -->
-  <a href="Leah_Fanfic.pdf">My Fanfic</a>
-  <hr />
+  <h1>Welcome to My Site!.</h1>
+  <!--beginning of Navbar -- TODO implement css-friendly navbar-->
+  <div class="topnav">
+    <a class="active" href="index.html">Home (You Are Here!)</a>
+    <a href="aboutme.html">About Me (Flashing Lights)</a> 
+    <a href="Breakout_Game.html">Breakout Game That I Nade</a>
+    <a href="Index_es.html">Mi Sitio En Español</a>
+    <!--<a href="maps.html">Openstreetmaps Example</a> -->
+    <a href="Leah_Fanfic.pdf">My Fanfic</a>
+  </div>
+  <!-- End of navbar -->
   <h3>About Me</h3>
   <p> Hello! I am but a lowly programmer, tending to her code. In my spare time, you can find me on the <a href="https://webchat.freenode.net/?channels=##transit">Transit</a> IRC channel on <a href="http://www.freenode.net">freenode</a> as the user ClaireDesu, or on Discord (Ask for my username on the IRC).</p>
   <h4>Programming Languages</h4>
@@ -67,6 +70,6 @@
   <footer>
   <a href="http://www.gnu.org"><img src="/Images/gnu_linux.png" alt="Support GNU/Linux!" height="100" width="150"></a>
   <a href="http://www.libreboot.org"><img src="/Images/Libreboot_Logo.jpg" alt="Support Libreboot!" height="100" width="65"></a>
-  <footer>
+  </footer>
 </body>
 </html>
