@@ -1,0 +1,48 @@
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 12px;
+}
+.topnav a:hover {
+    background-color : #ddd;
+    color: black;
+}
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+body {animation: mymove 5s infinite;
+      cursor: url(/Images/Tux.png),auto;
+     }
+h1 {color: blue};
+h3 {color: red;}
+p  {color: black;}
+ul { list-style: square;}
+@keyframes mymove { from {background-color: orange;} to {background-color: powderblue;} }
+.tex sub, .latex sub, .latex sup {
+    text-transform: uppercase;
+}
+/* Below is an implementation of the LaTeX logo in CSS */ 
+.tex sub, .latex sub {
+    vertical-align: -0.5ex;
+    margin-left: -0.1667em;
+    margin-right: -0.125em;
+}
+
+.tex, .latex, .tex sub, .latex sub {
+    font-size: 1em;
+}
+.latex sup {
+    font-size: 0.85em;
+    vertical-align: 0.15em;
+    margin-left: -0.36em;
+    margin-right: -0.15em;
+}
