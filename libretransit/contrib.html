@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Transit – Information about sending patches for review</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="/global.css">
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml"/>
+</head>
+<body>
+<header>
+<h1 class="title">Information about sending patches for review</h1>
+</header>
+<strong><a href='/contrib.html#editing-the-website-and-documentation-wiki-style'>Edit this page</a></strong> -- <a href='./'>Back to previous index</a>
+<nav id="TOC">
+<ul>
+<li><a href="#editing-the-website-and-documentation-wiki-style">Editing the website and documentation, wiki-style</a></li>
+<li><a href="#privacy-of-contributors-you-do-not-have-to-reveal-your-name-or-identity">Privacy of contributors (you do not have to reveal your name or identity!)</a></li>
+<li><a href="#general-guidelines-for-submitting-patches">General guidelines for submitting patches</a></li>
+<li><a href="#general-code-review-guidelines">General code review guidelines</a></li>
+<li><a href="#how-to-download-transit-from-the-git-repository">How to download Transit from the Git repository</a></li>
+<li><a href="#how-to-submit-your-patches-via-pull-requests">How to submit your patches (via pull requests)</a></li>
+</ul>
+</nav>
+<p><a href="contrib.html">English</a> – <a href="contrib.pt.html">Português</a></p>
+<p>Download Transit from the Git repository like so:</p>
+<pre><code>git clone https://notabug.org/transit/transit-website.git</code></pre>
+<p>Git is a version control system, used to host the site, to coordinate development. You can download and work on the entire website, using Git.</p>
+<p>The Git software is available on Windows, MacOS, GNU+Linux, BSD and others. We strongly recommend GNU+Linux or BSD, but Windows and Mac OS also work with Git. Search on Google for basic information about how to use Git.</p>
+<p>Some of the instructions here assume that you use GNU+Linux or BSD, so you will have to adapt accordingly if you use something else. The core administrators maintaining the website all use GNU+Linux.</p>
+<p>You can submit your patches via <a href="#how-to-submit-your-patches-via-pull-requests">Notabug pull requests</a> or</p>
+<div class="h"><h2 id="editing-the-website-and-documentation-wiki-style">Editing the website and documentation, wiki-style</h2><a aria-hidden="true" href="#editing-the-website-and-documentation-wiki-style">[link]</a></div>
+<p>The website and documentation is inside the <code>www</code> directory in the <a href="#how-to-download-transit-from-the-git-repository">Git repository</a>, in Pandoc flavoured Markdown. The website is generated into static HTML via Pandoc with the following scripts in that directory:</p>
+<ul>
+<li>index.sh: generates the news feed (on the News section of the website)</li>
+<li>publish.sh: converts an .md file to an .html file</li>
+<li>Makefile: with calls to index.sh and publish.sh, compiles the entire Transit website</li>
+</ul>
+<p>Use any standard text editor (e.g. Vim, Emacs, Nano, Gedit) to edit the files, commit the changes and <a href="#how-to-submit-your-patches-via-pull-requests">send patches</a>.</p>
+<p>Optionally, you can install a web server (e.g. lighttpd, nginx) locally and set the document root to the <em>www</em> directory in your local Git repository. With this configuration, you can then generate your local version of the website and view it by typing <code>localhost</code> in your browser’s URL bar.</p>
+<div class="h"><h2 id="privacy-of-contributors-you-do-not-have-to-reveal-your-name-or-identity">Privacy of contributors (you do not have to reveal your name or identity!)</h2><a aria-hidden="true" href="#privacy-of-contributors-you-do-not-have-to-reveal-your-name-or-identity">[link]</a></div>
+<p>Contributions that you make are publicly recorded, in a Git repository which everyone can access. This includes the name and email address of the contributor.</p>
+<p>In Git, for author name and email address, you do not have to use identifying data. You can use Transit Contributor and your email address could be specified as contributor@transit.org.uk. You are permitted to do this, if you wish to maintain privacy.</p>
+<p>Of course, you can use whichever name you like.</p>
+<p>Legally speaking, all copyright is automatic under the Berne Convention of international copyright law. It does not matter which name, or indeed whether you even declare a copyright (but we do require that certain copyright licenses are used - read more about that on this same page).</p>
+<p>If you use a different name and email address on your commits/patches, then you should be fairly anonymous.</p>
+<div class="h"><h2 id="general-guidelines-for-submitting-patches">General guidelines for submitting patches</h2><a aria-hidden="true" href="#general-guidelines-for-submitting-patches">[link]</a></div>
+<p>We require all patches to be submitted under a free license: <a href="https://www.gnu.org/licenses/license-list.html" class="uri">https://www.gnu.org/licenses/license-list.html</a>.</p>
+<ul>
+<li>For documentation, we require GNU Free Documentation License v1.3 or higher. Basically, this is required on any Web pages that you contribute, or make changes to.</li>
+<li>GNU General Public License v3 is highly recommended, if you’re contributing code (e.g. working on the static site generator that the site uses)</li>
+</ul>
+<p>If you do not agree to use one of these licenses accordingly, your contribution will be rejected.</p>
+<p><em>Always</em> declare a license on your work! Not declaring a license means that the default, restrictive copyright laws apply, which would make your work non-free.</p>
+<p>GNU+Linux is generally recommended as the OS of choice, for Transit development.</p>
+<div class="h"><h2 id="general-code-review-guidelines">General code review guidelines</h2><a aria-hidden="true" href="#general-code-review-guidelines">[link]</a></div>
+<p>Any member of the public can <a href="#how-to-submit-your-patches-via-pull-requests">submit a patch</a>.</p>
+<p>Your patch will be reviewed for quality assurance, and merged if accepted.</p>
+<div class="h"><h2 id="how-to-download-transit-from-the-git-repository">How to download Transit from the Git repository</h2><a aria-hidden="true" href="#how-to-download-transit-from-the-git-repository">[link]</a></div>
+<p>In your terminal:</p>
+<pre><code>git clone https://notabug.org/transit/transit-website.git</code></pre>
+<p>A new directory named <code>transit</code> will have been created, containing transit.</p>
+<div class="h"><h2 id="how-to-submit-your-patches-via-pull-requests">How to submit your patches (via pull requests)</h2><a aria-hidden="true" href="#how-to-submit-your-patches-via-pull-requests">[link]</a></div>
+<p>Make an account on <a href="https://notabug.org/" class="uri">https://notabug.org/</a> and navigate (while logged in) to <a href="https://notabug.org/transit/transit-website" class="uri">https://notabug.org/transit/transit-website</a>. Click <em>Fork</em> and in your account, you will have your own repository of Transit. Clone your repository, make whatever changes you like to it and then push to your repository, in your account on NotABug.</p>
+<p>Now, navigate to <a href="https://notabug.org/transit/transit-website/pulls" class="uri">https://notabug.org/transit/transit-website/pulls</a> and click <em>New Pull Request</em>.</p>
+<p>You can submit your patches there. Alternative, you can log onto the Transit IRC channel and notify the channel of which patches you want reviewed, if you have your own Git repository with the patches.</p>
+<p>Once you have issued a Pull Request, the Transit maintainers will be notified via email. If you do not receive a fast enough response from the project, then you could also notify the project via the ##transit channel on Freenode.</p>
+<hr />
+<p><strong><a href="/contrib.html#editing-the-website-and-documentation-wiki-style">Edit this page</a></strong> – <a href="/fdl-1.3.html">License</a> – <a href="/license.html">Template license</a> – <a href="/contrib.html">Contribute</a> – <a href="/aup.html">Conduct Guidelines</a></p>
+<p>Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License Version 1.3 or any later version published by the Free Software Foundation with no Invariant Sections, no Front Cover Texts, and no Back Cover Texts. A copy of this license is found in <a href="/fdl-1.3.html" class="uri">/fdl-1.3.html</a></p>
+<p>For information on who owns what copyright on each page, in what years, refer to the <a href="/contrib.html">Git repository</a> that the site is hosted in, and check commit logs.</p>
+</body>
+</html>
