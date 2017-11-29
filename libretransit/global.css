@@ -1,0 +1,31 @@
+html {
+    background-color: #eee;
+}
+
+body {
+    line-height: 1.6;
+    font-family: "Cantarell", sans-serif;
+    font-size: 1.1em;
+
+    background-color: #fff;
+    color: #222;
+
+    max-width: 60em;
+    margin: 0 auto;
+    padding: 0.2em 1em;
+
+    box-shadow: 0 0 6px;
+}
+
+#logo {
+    width: 25%;
+    float: right;
+}
+
+.br h1 {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
