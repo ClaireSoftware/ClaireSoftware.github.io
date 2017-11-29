@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <title>Transit – Informação sobre como enviar patches para serem analisados</title>
   <style type="text/css">code{white-space: pre;}</style>
-  <link rel="stylesheet" href="common/global.css">
+  <link rel="stylesheet" href="/global.css">
 <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml"/>
 </head>
 <body>
@@ -20,29 +20,29 @@
 <li><a href="#privacidade-dxs-contribuidorxs-você-não-tem-que-revelar-o-seu-nome-ou-identidade">Privacidade dxs contribuidorxs (você não tem que revelar o seu nome ou identidade!)</a></li>
 <li><a href="#diretrizes-gerais-para-submeter-patches">Diretrizes gerais para submeter patches</a></li>
 <li><a href="#diretrizes-para-verificação-de-código-programático">Diretrizes para verificação de código programático</a></li>
-<li><a href="#como-fazer-download-do-transit-a-partir-do-repositório-git">Como fazer download do Transit a partir do repositório Git</a></li>
+<li><a href="#como-fazer-download-do-libretransit-a-partir-do-repositório-git">Como fazer download do Libretransit a partir do repositório Git</a></li>
 <li><a href="#como-submeter-os-seus-patches-via-pull-requests">Como submeter os seus patches (via pull requests)</a></li>
 </ul>
 </nav>
 <p><a href="contrib.html">English</a> – <a href="contrib.pt.html">Português</a></p>
-<p>Descarregue o website do Transit do repositório Git, usando o seguinte comando:</p>
-<pre><code>git clone https://notabug.org/transit/transit-website.git</code></pre>
+<p>Descarregue o website do Libretransit do repositório Git, usando o seguinte comando:</p>
+<pre><code>git clone https://notabug.org/Libretransit/Libretransit-website.git</code></pre>
 <p>Git é um sistema de controlo de versões, utilizado para hospedar o site com o fim de coordenar o desenvolvimento do mesmo. Pode descarregar e trabalhar no website inteiro, usando Git.</p>
 <p>O Software Git está disponível em Windows, MacOS, Gnu+Linux, BSD e noutras plataformas. Nós recomendamos vivamente que utilize Gnu+Linux ou BDS, mas Windows ou MacOS também funcionam. Procure no Google informação básica sobre como usar o Git.</p>
 <p>Algumas das instruções nesta página assumem que você usa Gun-Linux ou BSD, por isso você irá ter que adaptar de acordo, se usar outro sistema. Todxs xs administradorxs que mantêm o website usam Gnu+Linx.</p>
 <p>Você pode submeter os seus patches através de <a href="#how-to-submit-your-patches-via-pull-requests">pull requests no Notabug</a> ou ao</p>
 <div class="h"><h2 id="editar-o-website-e-documentação-tal-como-se-tratasse-de-um-wiki">Editar o website e documentação, tal como se tratasse de um wiki</h2><a aria-hidden="true" href="#editar-o-website-e-documentação-tal-como-se-tratasse-de-um-wiki">[link]</a></div>
-<p>O website e respetiva documentação encontram-se dentro do diretório <code>www</code> no <a href="#how-to-download-transit-from-the-git-repository">repositório Git</a>, escrito em Pandoc com certos aspetos de Markdown. O website é gerado em HTML estático através de Pandoc com os seguintes scripts em cada diretório:</p>
+<p>O website e respetiva documentação encontram-se dentro do diretório <code>www</code> no <a href="#how-to-download-Libretransit-from-the-git-repository">repositório Git</a>, escrito em Pandoc com certos aspetos de Markdown. O website é gerado em HTML estático através de Pandoc com os seguintes scripts em cada diretório:</p>
 <ul>
 <li>index.sh: gera o feed de notícias (na secção de notícias do webisite)</li>
 <li>publish.sh: converte um ficheiro .md num ficheiro .html</li>
-<li>Makefile: usando chamadas aos ficheiro index.sh e publish.sh, compila o website inteiro do Transit</li>
+<li>Makefile: usando chamadas aos ficheiro index.sh e publish.sh, compila o website inteiro do Libretransit</li>
 </ul>
 <p>Use qualquer editor de texto (por exemplo Vim, Emacs, Nano, Gedit) para editar os ficheiros, fazer commits e <a href="#how-to-submit-your-patches-via-pull-requests">enviar patches</a>.</p>
 <p>Como alternativa, pode instalar um web server (por exemplo lighttpd, nginx) localmente e definir o documento root como o diretório <em>www</em> no seu repositório Git local. Com esta configuração, você pode gerar a sua versão local do website e vê-la ao escrever <code>localhost</code> na barra de URL do seu browser.</p>
 <div class="h"><h2 id="privacidade-dxs-contribuidorxs-você-não-tem-que-revelar-o-seu-nome-ou-identidade">Privacidade dxs contribuidorxs (você não tem que revelar o seu nome ou identidade!)</h2><a aria-hidden="true" href="#privacidade-dxs-contribuidorxs-você-não-tem-que-revelar-o-seu-nome-ou-identidade">[link]</a></div>
 <p>As contribuições que você faz são registadas publicamente, num repositório Git ao qual toda a gente tem acesso. Isto inclui o nome e endereço da pessoa que contribui.</p>
-<p>Você não necessita de usar informação sobre si no Git, como o seu nome e endereço de email. Você pode usar o nome “Transit Contributor” e o seu email pode ser “contributor@transit.org.uk”. Você é permitidx a fazê-lo se desejar manter a sua privacidade.</p>
+<p>Você não necessita de usar informação sobre si no Git, como o seu nome e endereço de email. Você pode usar o nome “Libretransit Contributor” e o seu email pode ser “contributor@Libretransit.org.uk”. Você é permitidx a fazê-lo se desejar manter a sua privacidade.</p>
 <p>Obviamente que você pode escolher qualquer nome que você queira.</p>
 <p>Em termos legais. qualquer copyright é automaticamente aplicado segundo a Convenção da União de Berna, independentemente do nome que você usar ou mesmo independentemente de você declarar copyright ou não (embora nós pedimos que certas licenças sejam utilizadas - leia mais sobre este assunto mais à frente nesta página).</p>
 <p>Se você utilizar um nome e um endereço de email diferentes em cada commit/patch que você fizer, então você deverá manter-se suficientemente anónimx.</p>
@@ -57,15 +57,15 @@
 <div class="h"><h2 id="diretrizes-para-verificação-de-código-programático">Diretrizes para verificação de código programático</h2><a aria-hidden="true" href="#diretrizes-para-verificação-de-código-programático">[link]</a></div>
 <p>Qualquer membro do público pode <a href="#how-to-submit-your-patches-via-pull-requests">submeter um patch</a>.</p>
 <p>O seu patch irá ser analisado para garantir a sua qualidade e integrado se for aceite.</p>
-<div class="h"><h2 id="como-fazer-download-do-transit-a-partir-do-repositório-git">Como fazer download do Transit a partir do repositório Git</h2><a aria-hidden="true" href="#como-fazer-download-do-transit-a-partir-do-repositório-git">[link]</a></div>
+<div class="h"><h2 id="como-fazer-download-do-libretransit-a-partir-do-repositório-git">Como fazer download do Libretransit a partir do repositório Git</h2><a aria-hidden="true" href="#como-fazer-download-do-libretransit-a-partir-do-repositório-git">[link]</a></div>
 <p>No seu terminal:</p>
-<pre><code>git clone https://notabug.org/transit/transit-website.git</code></pre>
-<p>Um diretório chamado <code>transit</code> será criado com o Transit dentro dele.</p>
+<pre><code>git clone https://notabug.org/Libretransit/Libretransit-website.git</code></pre>
+<p>Um diretório chamado <code>Libretransit</code> será criado com o Libretransit dentro dele.</p>
 <div class="h"><h2 id="como-submeter-os-seus-patches-via-pull-requests">Como submeter os seus patches (via pull requests)</h2><a aria-hidden="true" href="#como-submeter-os-seus-patches-via-pull-requests">[link]</a></div>
-<p>Faça uma conta em <a href="https://notabug.org/" class="uri">https://notabug.org/</a> e vá à seguinte página (depois de ter feito log in) <a href="https://notabug.org/transit/transit-website" class="uri">https://notabug.org/transit/transit-website</a>. Clique <em>Fork</em> e você irá receber um repositório do Transit na sua conta. Faça uma cópia do seu repositório, faça as alterações que tem a fazer e depois introduza essas alterações ao seu repositório, na sua conta NotABug.</p>
-<p>Vá à página <a href="https://notabug.org/transit/transit-website/pulls" class="uri">https://notabug.org/transit/transit-website/pulls</a> e clique em <em>Novo Pull Request</em>.</p>
-<p>Você pode submeter os seus patches nesta página. Alternativamente, você pode fazer login ao canal de IRC do Transit e chamar a atenção dos utilizadores presentes para patches que você quer que sejam analisados.</p>
-<p>Assim que você tenha feito um Pull Request, xs responsáveis pelo bom funcionamento do Transit irão ser notificadxs via email. Se você não receber uma resposta suficientemente rápida a partir do projecto, então você pode notificar o projecto através do canal ##transit no Freenode.</p>
+<p>Faça uma conta em <a href="https://notabug.org/" class="uri">https://notabug.org/</a> e vá à seguinte página (depois de ter feito log in) <a href="https://notabug.org/Libretransit/Libretransit-website" class="uri">https://notabug.org/Libretransit/Libretransit-website</a>. Clique <em>Fork</em> e você irá receber um repositório do Libretransit na sua conta. Faça uma cópia do seu repositório, faça as alterações que tem a fazer e depois introduza essas alterações ao seu repositório, na sua conta NotABug.</p>
+<p>Vá à página <a href="https://notabug.org/Libretransit/Libretransit-website/pulls" class="uri">https://notabug.org/Libretransit/Libretransit-website/pulls</a> e clique em <em>Novo Pull Request</em>.</p>
+<p>Você pode submeter os seus patches nesta página. Alternativamente, você pode fazer login ao canal de IRC do Libretransit e chamar a atenção dos utilizadores presentes para patches que você quer que sejam analisados.</p>
+<p>Assim que você tenha feito um Pull Request, xs responsáveis pelo bom funcionamento do Libretransit irão ser notificadxs via email. Se você não receber uma resposta suficientemente rápida a partir do projecto, então você pode notificar o projecto através do canal ##Libretransit no Freenode.</p>
 <hr />
 <p><strong><a href="/contrib.pt.html#editar-o-website-e-documentação-tal-como-se-tratasse-de-um-wiki">Editar esta página</a></strong> – <a href="/fdl-1.3.html">Licença</a> – <a href="/license.html">Modelo licença</a> – <a href="/contrib.pt.html">Contribuir</a> – <a href="/aup.pt.html">Diretrizes de Conduta</a></p>
 <p>Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License Version 1.3 or any later version published by the Free Software Foundation with no Invariant Sections, no Front Cover Texts, and no Back Cover Texts. A copy of this license is found in <a href="/fdl-1.3.html" class="uri">/fdl-1.3.html</a></p>
