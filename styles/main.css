@@ -7,7 +7,8 @@ p  {color: black;}
 ul { list-style: square;}
 @keyframes mymove { 
       0% {background: orange;}
-      100% {background: powderblue;}
+      75% {background: powderblue;}
+      100% {background: orange;}
 }
 .tex sub, .latex sub, .latex sup {
     text-transform: uppercase;
