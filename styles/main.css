@@ -1,11 +1,14 @@
-body {animation: mymove 5s linear;
+body {animation: mymove 5s;
       cursor: url(/images/Tux.png),auto;
      }
 h1 {color: blue};
 h3 {color: red;}
 p  {color: black;}
 ul { list-style: square;}
-@keyframes mymove { from {background-color: orange;} to {background-color: powderblue;}}
+@keyframes mymove { 
+      0% {background: orange;}
+      100% {background: powderblue;}
+}
 .tex sub, .latex sub, .latex sup {
     text-transform: uppercase;
 }
