@@ -1,4 +1,4 @@
-body {animation: mymove 5s infinite;
+body {animation: mymove 5s linear;
       cursor: url(/images/Tux.png),auto;
      }
 h1 {color: blue};
