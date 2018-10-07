@@ -1,5 +1,5 @@
 
-body {background: linear-gradient(to bottom, red,orange,yellow,green,blue,indigo,violet);
+body .rainbow {background: linear-gradient(to bottom, red,orange,yellow,green,blue,indigo,violet);
       cursor: url(/images/Tux.png),auto;
      } 
 h1 {color: blue;}

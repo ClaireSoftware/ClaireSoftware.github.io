@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <!-- I'm so sorry for this terrible, terrible Web design. I deserve to be tried in the hague.-->
+  <head>    
+    <link rel="stylesheet" href="styles/aboutme.css" type="text/css">
+    <link rel="stylesheet" href="styles/nav.css" type="text/css">
+    
+    <style>
+    </style>
+    
+    <title>Kali Pi Zero Tut.!</title>
+  </head>
+  <body>
+    <h1>How To Make a Kali Linux Raspberry Pi Zero</h1>
+    <div class="topnav">
+      <a class="active" href="index.html">Home</a>
+      <a href="aboutme.html">About Me (You are here!)</a>
+      <a href="Breakout_Game.html">Breakout Game That I Made</a>
+      <a href="files/Leah_Fanfic.pdf">A Fanfic That I Wrote</a>
+    </div>
+    <marquee>USE FREE SOFTWARE</marquee>
+    <h2> This is a (poorly designed) tutorial about how to use Adafruit's <a href="https://www.adafruit.com/product/3527">PiOLED</a> With a Raspberry Pi Zero to make a portable thumbdrive with Kali Linux.</h2>
+    <h2 style="color: orchid;">What You'll Need</h2>
+    <!-- Beginning of "Readability" div-->
+    <div style="border: 2px solid rgb(27,245,218);">
+      <ul style= "list-style-type: circle;">
+	<li class="bigger">A <a href="https://www.adafruit.com/product/3708">Raspberry Pi Zero WH</a> (Unfortunately, it's hard to avoid paying the adafruit tax on this one.</li>
+	<li class="bigger">A <a href="https://www.adafruit.com/product/3527">Adafruit PiOLED</a> A pretty nice oled for the price, and not too overpriced.</li>
+	<li class="bigger">A <a href="https://www.ebay.com/itm/132658575641">Pi Zero Badusb Case</a> A really nice case for the pi zero, compatible with the pi zero. Lets you power it off of a standard USB port. You could use a microUSB instead.</li>
+	<li class="bigger">A MicroSD card. 16GB or so should be fine. Try for class 10 :)<li>
+      </ul>
+    </div>
+    
+    <h2 style="color: orchid;">How to Setup the Pi</h2>
+    <div style="border: 2px solid rgb(27,245,218);">
+      <ul style="list-style-type: circle;">
+	<li>Image Raspbian Lite to the SD card, turn it into an ethernet gadget. (Put dtoverlay=dwc2 at the bottom of config.txt, put modules-load=dwc2,g_ether in b between rootwait and quiet in cmdlline.txt). Add another user and give them sudo access, or simply use root all the time like kali does.</li>
+	<li>Run the following script on the pi as administrator to install mate and katoolin. (Credit to jerry gamblin for original script :) ) Katoolin seems to want to pull from an invalid keyserver, so I made a small modification to make it pull from a valid one. <br/><code>#!/bin/bash<br/>apt-get update && sudo apt dist upgrade -y </br> apt-get -y install --no-install-recommends git mate-core mate-desktop<br/>apt-get install mate-core mate-desktop-environment mate-notification-daemon xrdp iceweasel xserver-xorg-video-fbdev -y <br/> echo mate-session> ~/.xession</br>cp ~/.xsession /etc/skel <br/> git clone https://github.com/ClaireSoftware/katoolin.git && cp katoolin/katoolin.py /usr/bin/katoolin </br> chmod +x /usr/bin/katoolin <br/> </code></li>
+	<li>Use raspi-config to configure I2C in interfacing options, and then add your user to the i2c group.</li>
+	<li>Install the needed libraries for I2C, and run the example program. <br/><code>sudo apt install build-essential python-dev python-pip python-imaging python-smbus<br/> sudo pip install RPi.GPiO <br/> git clone https://github.com/adafruit/Adafruit_Python_SSD1306.git</br> cd Adafruit_Python_SSD1306 <br/> sudo python setup.py install</code></li>
+	<li>Test the OLED :)<br/><code>cd examples</br>sudo python stats.py # Needs to be run as sudo until reboot</code></li>
+      </ul>
+    </div>
+    <h2>Done!</h2>
+    <div style="border: 2px solid rgb(27,245,218);">
+      <p>At this point, you should be done configuring the pi. Soon, I'll update this with my own stats.py script that lets you show both IPs, since the one that is included only shows a single one (when connected to a PC, it's the USB RNDIS IP.</p>
+    </div>
+  </body>
+</html>
