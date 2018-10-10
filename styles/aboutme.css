@@ -1,7 +1,8 @@
 
-body .rainbow {background: linear-gradient(to bottom, red,orange,yellow,green,blue,indigo,violet);
-      cursor: url(/images/Tux.png),auto;
-     } 
+body  {
+    background: linear-gradient(to bottom, red,orange,yellow,green,blue,indigo,violet);
+    cursor: url(/images/Tux.png),auto;
+} 
 h1 {color: blue;}
 h3 {color: red;}
 p  {color: black; font-weight: 500;}
@@ -17,7 +18,6 @@ p  {color: black; font-weight: 500;}
 .whitebold
 
 {
-    
     color: white;
     font-weight: bold;
     font-family: "Comic Sans MS", cursive, sans-serif;
