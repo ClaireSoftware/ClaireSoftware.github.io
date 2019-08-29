@@ -1,5 +1,5 @@
-body {animation: mymove 20s infinite;
-      cursor: url(/images/Tux.png),auto;
+body {
+      background-color: #D0FEF5;
      }
 h1 {color: blue};
 h3 {color: red;}
